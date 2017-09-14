@@ -1,7 +1,7 @@
 # DrawingApplication
 ===================================
 
->This project is a sample for finger-painting app for Android using touch interaction:
+This project is a sample for finger-painting app for Android using touch interaction:
 --------------------------------------------------------------------------------------
 
 - Canvas 
@@ -10,8 +10,8 @@
 - touch interaction
 
 
->How to use this application:
------------------------------
+How to use this application:
+----------------------------
 
 - The user will be able to select color from a color palette, choose a brush size, erase, create a new drawing, or save their existing drawing to the device gallery.
 - their are 4 ImageButton

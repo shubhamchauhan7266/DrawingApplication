@@ -19,7 +19,6 @@ import android.util.TypedValue;
 
 public class DrawingView extends View {
     private float brushSize, lastBrushSize;
-    private boolean erase=false;
 
     //drawing path
     private Path drawPath;
@@ -43,17 +42,15 @@ public class DrawingView extends View {
         drawPaint = new Paint();
         canvasPaint = new Paint(Paint.DITHER_FLAG);
 
+        brushSize = getResources().getInteger(R.integer.medium_size);
         drawPaint.setColor(paintColor);
         drawPaint.setAntiAlias(true);
-        drawPaint.setStrokeWidth(20);
         drawPaint.setStyle(Paint.Style.STROKE);
         drawPaint.setStrokeJoin(Paint.Join.ROUND);
         drawPaint.setStrokeCap(Paint.Cap.ROUND);
         drawPaint.setStrokeWidth(brushSize);
 
-        brushSize = getResources().getInteger(R.integer.medium_size);
         lastBrushSize = brushSize;
-
     }
 
     @Override
@@ -105,9 +102,8 @@ public class DrawingView extends View {
 
     public void setBrushSize(float newSize){
 //update size
-        float pixelAmount = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+        brushSize= TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
                 newSize, getResources().getDisplayMetrics());
-        brushSize=pixelAmount;
         drawPaint.setStrokeWidth(brushSize);
     }
 
@@ -120,8 +116,7 @@ public class DrawingView extends View {
 
     public void setErase(boolean isErase){
 //set erase true or false
-        erase=isErase;
-        if(erase){
+        if(isErase){
             drawPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
         }
         else drawPaint.setXfermode(null);

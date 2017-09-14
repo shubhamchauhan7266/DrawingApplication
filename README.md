@@ -30,12 +30,6 @@ Pre-requisites
 - Android Build Tools v26.0.0
 
 
-
-
-
-
 ![first](https://user-images.githubusercontent.com/30496566/30417386-2a6e4750-994d-11e7-81c1-8984f71edfb3.png)
-
 ![second](https://user-images.githubusercontent.com/30496566/30417387-2a704e38-994d-11e7-8f8a-4c14f88fe7ae.png)
-
 ![third](https://user-images.githubusercontent.com/30496566/30417388-2a748df4-994d-11e7-9ad8-121d370ef75b.png)
